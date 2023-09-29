@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="{% url'edcode' %}">
+       
+        <input type="text" name="pname" value="{{a.product_name}}">
+        <input type="text" name="des" value="{{a.desc}}">
+    
+        <input type="text" name="price" value="{{a.price}}">
+        <button type="submit">Submit</button>
+        
+    </form>
+</body>
+</html>

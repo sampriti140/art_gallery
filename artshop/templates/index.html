@@ -1,0 +1,149 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        .card {
+            box-shadow: 0 0px 24px 4px rgba(5, 19, 149, 0.551);
+            max-width: 300px;
+            margin: 60px;
+            text-align: center;
+            font-family: arial;
+          }
+          
+          .price {
+            color: grey;
+            font-size: 22px;
+          }
+          
+          .card button {
+            border: none;
+            outline: 0;
+            padding: 12px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+          }
+          
+          .card button:hover {
+            opacity: 0.7;
+          }
+          #shreya{
+         
+          margin-right: auto; 
+          margin-left: auto;
+          }
+    </style>
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <title>Noble Nebula</title>
+  </head>
+  <body>
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    
+  
+    {% include "navbar.html" %}
+        
+    <table id="shreya">
+     <tr>
+      
+      {% for i in x %}
+      <td> 
+        
+     <div class="card">
+        <a href="{%static 'images/sam4.jpg' %}"><img src="{%static 'images/sam4.jpg' %}" style="width:200px;height:200px;"> </a>
+        <h1>{{i.pname}}</h1>
+        <p class="price">{{i.price}}</p>
+        <p>{{i.desc}}</p>
+        <a href="/check/{{i.id}}"><p><button>BUY NOW</button></p></a>
+     </div>
+     
+  </td>
+  {% endfor %}
+     
+      <td>
+      
+      <div class="card">
+      <a href="{%static 'images/sh3.jpg' %}"><img src="{%static 'images/sh3.jpg' %}" style="width:200px;height:200px;"> </a>
+      <h1>Lord Krishna</h1>
+      <p class="price">$100</p>
+      <p>TRUST HIM,everything will be ok</p>
+      <a href="/orders"><p><button>BUY NOW</button></p></a>
+
+
+      </div>
+      </td>
+      <td> 
+        <div class="card">
+           <a href="{%static 'images/sam6.jpg' %}"><img src="{%static 'images/sam6.jpg' %}" style="width:200px;height:200px;"> </a>
+           <h1>The Saviour</h1>
+           <p class="price">$100</p>
+           <p>Save me if I drown</p>
+           <a href="/orders"><p><button>BUY NOW</button></p></a>
+        </div>
+     </td>
+     </tr>
+     <tr>
+      <td><div class="card">
+        <a href="{%static 'images/samp2.jpg' %}"><img src="{%static 'images/samp2.jpg' %}" style="width:200px;height:200px;"> </a>
+        <h1>Day Dreaming</h1>
+        <p class="price">$100</p>
+        <p>LOSE YOURSELF TO FIND YOURSELF</p>
+        <a href="/orders"><p><button>BUY NOW</button></p></a>
+
+
+      </div>
+   </td>
+      <td><div class="card">
+        <a href="{%static 'images/sam3.jpg' %}"><img src="{%static 'images/sam3.jpg' %}" style="width:200px;height:200px;"> </a>
+        <h1>The boy</h1>
+        <p class="price">$100</p>
+        <p>the boy</p>
+        <a href="/orders"><p><button>BUY NOW</button></p></a>
+
+
+      </div></td>
+      <td> 
+        <div class="card">
+           <a href="{%static 'images/sh8.jpg' %}"><img src="{%static 'images/sh8.jpg' %}" style="width:200px;height:200px;"> </a>
+           <h1>Joker</h1>
+           <p class="price">$100</p>
+           <p>EVERYONE WEARS A MASK</p>
+           <a href="/orders"><p><button>BUY NOW</button></p></a>
+        </div>
+     </td>
+      <td>
+        <div class="card">
+          <a href="{%static 'images/sh4.jpeg' %}"><img src="{%static 'images/sh4.jpeg' %}" style="width:210px;height:220px;"> </a>
+          <h1>LITTLE BABY</h1>
+          <p class="price">$100</p>
+          <p>A cute baby holding a ball</p>
+          <a href="/orders"><p><button>BUY NOW</button></p></a>
+
+
+        </div>
+
+      </td>
+     
+     </tr>
+
+    </table>
+    {% include "footer.html" %}    
+  </body>
+  </html>

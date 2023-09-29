@@ -1,0 +1,43 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    {% include "navbar.html" %}
+    <div style="text-align: center; margin: 100px;">
+        <h1 style="margin: 20px;">CONTACT US</h1>
+    
+        <form method="GET">
+        <div  style="margin: 10px;">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <br>
+        </div>
+        <div style="margin: 10px;">
+    
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email">
+            <br>
+    
+        </div>
+        <div style="margin: 10px;">
+    
+    
+            <label for="message">message:</label>
+            <input type="text" id="message" name="message">
+            <br>
+        </div>
+       
+        <input type="submit" value="submit">
+    </form>
+    </div>
+    
+   
+{% include "footer.html" %}
+</body>
+</html>

@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About_us</title>
+</head>
+<body>
+{% include "navbar.html" %}
+  <table>
+<tr>
+    <td><h1 style="text-align: center;">About Us</h1>
+        <br>
+        <p style="padding-left: 15px; padding-right: 15px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam alias eligendi dicta voluptas praesentium error laudantium voluptatum consequuntur nobis ratione atque rerum itaque earum eaque vel ullam eum magnam expedita, minima magni delectus, ipsa, perferendis placeat dolores? Unde sequi nemo alias esse ut, vero corporis dolor, quas voluptate omnis assumenda!</p></td>
+
+    <td>
+        <img src="{% static 'images/hope.jpg' %}" alt="...." style="width: 600px;">
+    </td>
+</tr>
+  </table>  
+  <!-- <img src="{% static 'hope.jpg' %}" alt="...."> -->
+</body>
+{% include "footer.html" %}
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product details</title>
+    <style>
+     .pth{
+        border-style: dotted dashed solid double;
+        padding: 10px;
+     }
+     #st{
+        margin: 10px auto auto 110px;
+     }
+    </style>
+    
+</head>
+<body>
+    <table id="st">
+        <h1 style="margin-left: 100px;">
+            Product Items:
+        </h1>
+        <tr style="margin:20px;" >
+            <td class="pth">Product name</td>
+            <td class="pth">Product description</td>
+            <td class="pth">Price</td>
+            
+            
+        </tr>   
+        {% for i in a %}
+        <tr>
+            <td >{{i.pname}}</td>
+            <td >{{i.desc}}</td>
+            <td >{{i.price}}</td>
+            
+            
+            <td><a href="delet/{{i.id}}">Delete</a></td>
+            {% comment %} <td><a href="edits/{{i.id}}">Edit</a></td> {% endcomment %}
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
